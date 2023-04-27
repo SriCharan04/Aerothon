@@ -36,7 +36,6 @@ if (!checkConnection(MPU6050_ADDRESS_1)||(!checkConnection(MPU6050_ADDRESS_2)))
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
   mpu.getMotion6(&ax, &ay, &az, &gx, &gy, &gz);
   bme.readPressure(&pressure);
   bme.readAltitude(&altitude);
